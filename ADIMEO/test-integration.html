@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Test d'intégration</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/plateforme.png" />
+</head>
+<body>
+	<header>
+		<div class="wrapper wrapper-pre-header">
+			<div class="pre-header">
+				<a class="logo-pro" href="#"><img src="img/logo-header.png" alt="100% pro"></a>
+				<div class="left">
+					Réservé exclusivement <br> aux professionnels du bâtiment
+				</div>
+				<div class="right">
+					<nav id="pre-header-argu">
+						<ul class="argu">
+							<a href="#"><li class="commande"><img src="img/commande.png" alt="commande">Commandé avant 12H, livré avant 16H !</a></li>
+							<a href="#"><li class="retrait"><img src="img/retrait.png" alt="retrait">Retrait en dépôt</a></li>
+							<a href="#"><li class="paiement"><img src="img/cadenas.png" alt="cadenas">Paiement sécurisé</a></li>
+							<li class="langue">
+								<div class="custom-select" style="width:180px;">
+									<select name="langue" id="langue">
+										<option value="">Français</option>
+										<option value="anglais">Anglais</option>
+										<option value="espagnol">Espagnol</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper wrapper-header">
+			<div class="header">
+				<div class="logo"><img src="img/logo.png" alt="Logo Plateforme du bâtiment" /></div>
+				<div class="recherche">
+					<form class="form-recherche" method="get">
+						<div class="form-item">
+							<select class="metier" name="metier">
+								<option value="">Par métier</option>
+								<option value="1">Maçon</option>
+								<option value="2">Plombier</option>
+								<option value="3">Peintre</option>
+								<option value="4">Chauffagiste</option>
+							</select>
+						</div>
+						<div class="form-item">
+							<input class="mot-cle" type="text" name="mots_cles" placeholder="Rechercher un produit, une marque..." />
+						</div>
+						<div class="form-item-loupe">
+							<!-- <input type="submit" name="submit" value="Rechercher" /> -->
+							<a href="#"><img src="img/loupe.png" alt="Recherche"></a>
+						</div>
+					</form>
+				</div>
+				<nav class="menu-utilisateur">
+					<ul>
+						<a href="#"><img class="carte" src="img/depot.png" alt="carte"><li class="depot"><div class="label">Mon dépôt</a></div><div class="lien"><a href="#"><span>Se connecter</span></a></div></li>
+						<a href="#monCompte"><img class="compte-img" src="img/compte.png" alt="compte"><li class="compte"><div class="label">Mon compte &nbsp;<img src="img/fleche-bas.png" alt="Flèche vers le bas"></a></div><div class="lien"><a href="#"><span>Se connecter</span></a></div></li>
+						<a class="open-modal-btn" href="#"><img class="panier-img" src="img/panier.png" alt="panier"><li class="panier"><div class="label">Mon panier &nbsp;<img src="img/fleche-bas.png" alt="Flèche vers le bas"></a></div></li>
+						<div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
+							<div>
+								<div>
+									<h4 id="modalTitle" class="modal-title">Mon Panier</h4>
+									<img class="panier-img" src="img/panier.png" alt="panier">
+								</div>
+								<div>
+									<p>Votre panier est vide !</p>
+								</div>
+								<a href="#">Voir mon panier &nbsp; →</a> <br>
+								<button class="modal-close-btn">Fermer</button>
+							</div>
+						</div>
+					</ul>
+				</nav>
+			</div>
+			<nav id="LeMenu" class="main-menu">
+				<ul>
+					<li><a href="#">Maçon <br> plaquiste</a></li> <hr>
+					<li><a href="#">Menuisier <br> serrurier</a></li> <hr>
+					<li><a href="#">Peintre</a></li> <hr>
+					<li><a href="#">Carreleur</a></li> <hr>
+					<li><a href="#">Plombier</a></li> <hr>
+					<li><a href="#">Electricien</a></li> <hr>
+					<li><a href="#">Outillage <br> protection</a></li> <hr>
+					<li class="highlighted"><a href="#">100% <br> pro</a></li> <hr>
+					<li class="highlighted"><a href="#">100% <br> service</a></li> <hr>
+					<li class="highlighted"><a href="#">100% <br> solution</a></li>
+				</ul>
+			</nav>
+			<div id="CmdMenu" title="Afficher/Masquer le Menu">&#9776;</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrapper main-wrapper">
+			<div id="main-container">
+				<nav class="breadcrumb">
+					<ul>
+						<li><a href="#">Accueil</a></li>
+						<li>> <a href="#">Métier</a></li>
+						<li>> <a href="#">Grande famille</a></li>
+						<li>> <a href="#">Famille</a></li>
+						<li>> <a href="#">Produit</a></li>
+					</ul>
+				</nav>
+				<h1 id="monCompte">Première connexion</h1>
+				<h2>J'ai déjà ma carte</h2>
+				<form class="get" method="get">
+					<div class="form-item numero-carte">
+						<label for="numero-carte">Numéro de carte*</label> <br>
+						<input type="text" id="numero-carte" name="numero_carte" placeholder="N° à 13 chiffres" />
+					</div>
+					<div class="form-item mot-de-passe">
+						<label for="mot-de-passe">Mot de passe*</label> <br>
+						<input type="text" id="mot-de-passe" name="mot_de_passe" />
+					</div>
+					<div class="form-item numero-portable">
+						<label for="numero-portable">N° de téléphone portable*</label> <br>
+						<input type="text" id="numero-portable" name="numero_portable" />
+					</div>
+					<div class="form-item confirmer-mot-de-passe">
+						<label for="confirmer-mot-de-passe">Confirmation*</label> <br>
+						<input type="text" id="confirmer-mot-de-passe" name="confirmer_mot_de_passe" />
+					</div>
+					<div class="form-item adresse-email">
+						<label for="adresse-email">Adresse email*</label> <br>
+						<input type="text" id="adresse-email" name="adresse_email" />
+					</div>
+					<div class="form-item depot-favori">
+						<label for="depot-favori">Dépôts favoris*</label>
+						<div class="custom-select depot" style="width:200px;">
+							<select id="depot-favori" name="depot_favori">
+								<option value="">Choisir mon dépôt</option>
+								<option value="1">Aubervilliers</option>
+								<option value="2">Pantin</option>
+								<option value="3">Nanterre</option>
+								<option value="4">Paris 12</option>
+							</select>
+						</div>
+						<!-- <span class="depot-fleche">
+							<div><img class="fleche-haut" src="img/depot-haut.png" alt="flèche haut"></div>
+							<div><img class="fleche-bas" src="img/depot-bas.png" alt="flèche bas"></div>
+						</span> <br> -->
+						<span class="depot-change"><a href="#">Changer de dépôt</a></span>
+					</div>
+					<div class="form-item confimer-email">
+						<label for="confimer-email">Confirmer adresse email*</label> <br>
+						<input type="text" id="confimer-email" name="confimer_email" />
+					</div>
+					<div class="form-item submit-form">
+						<a href="#">Carte perdue ?</a>
+						<a class="connexion" href="#">Se connecter</a>
+					</div>
+				</form>
+				<div class="devenir-client">
+					<h2 class="devenir-client-titre">Devenir client</h2>
+					<div class="logo2">
+						<img src="img/plateforme.png" alt="Logo Plateforme du bâtiment" />
+					</div>
+					<div class="demande-carte">
+						<h3>Je demande <span>ma carte</span> 100% pro</h3>
+						<p>
+							L'accès à nos points de vente est exclusivement réservé aux professionnels du bâtiment.
+						</p>
+					</div>
+					<div class="carte-right">
+						<a href="#">Demander sa carte</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="garantie">
+		<div>
+			<img src="img/garantie.png" alt="garantie">
+			<p>Garantie & service <br> après vente</p>
+		</div>
+		<div>
+			<img src="img/heureux.png" alt="Satisfait ou remboursé">
+			<p>Heureux ou <br> remboursé</p>
+		</div>
+		<div>
+			<img src="img/livrer.png" alt="livraison">
+			<p>Commandé avant 12H, <br> livré avant 16H !</p>
+		</div>
+		<div>
+			<img src="img/retrait-couleur.png" alt="Retrait">
+			<p>Retrait 1 heure <br> en dépôt</p>
+		</div>
+		<div>
+			<img src="img/cadenas-couleur.png" alt="Paiement sécurisé">
+			<p>Paiement en ligne <br> 100% sécurisé</p>
+		</div>
+	</div>
+	<div class="assistance">
+		<div>
+			<h3>Assistance & questions</h3>
+			<ul>
+				<a href="#"><li><img src="img/ellipse.png" alt="ellipse"> Retours et remplacements</li></a>
+				<a href="#"><li><img src="img/ellipse.png" alt="ellipse"> Contactez votre conseiller</li></a>
+				<a href="#"><li><img src="img/ellipse.png" alt="ellipse"> Découvrez le site pas à pas</li></a>
+				<a href="#"><li><img src="img/ellipse.png" alt="ellipse"> Foire aux questions</li></a>
+			</ul>
+			<p>Traduire le site</p>
+			<div class="custom-select" style="width:220px;">
+			<img class="map-icon" src="img/map.png" alt="map-icon">
+			<select id="langue" name="langue">
+				<option value="">Choisir sa langue</option>
+				<option value="Français">Français</option>
+				<option value="Anglais">Anglais</option>
+				<option value="Espagnol">Espagnol</option>
+			</select><img class="fleche-bas-footer" src="img/fleche-bas-footer.png" alt="flèche vers le bas"></div>
+		</div>
+		<hr>
+		<div>
+			<h3>Votre avis compte</h3>
+			<div class="note">
+				<img class="trustpilot" src="img/trustpilot.png" alt="Trustpilot">
+				<div class="la-note">
+					<p>4,8<span>/5</span></p>
+					<img src="img/star.png" alt="étoile"><img src="img/star.png" alt="étoile"><img src="img/star.png" alt="étoile"><img src="img/star.png" alt="étoile"><img src="img/half-star.png" alt="demi-étoile">
+				</div>
+				<p class="note-paragraphe">En toute indépendance, La Plateforme du Bâtiment mesure la satisfaction de nos clients et fait la preuve de notre qualité de service.</p>
+				<div class="voir-avis">
+					<a href="#">Voir tous les avis</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="mobiles">
+			<h3>Soyez mobiles</h3>
+			<p>Avec les applications iPhone et Androïd La Plateforme du Bâtiment vous fait <span class="gagner">gagner du temps</span></p>
+			<div class="appli">
+				<a class="apple" href="#"><img src="img/app-store.png" alt="AppStore"></a> 
+				<a class="google" href="#"><img src="img/google-play.png" alt="Google Play"></a>
+			</div>
+			<p>Téléchargez et installez l'appliocation mobile qui correspond à votre téléphone</p>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-up">
+			<div>
+				<img src="img/logo-bas.png" alt="logo">
+				<img src="img/logo-header.png" alt="100%">
+				<p>L'unique réseau exclusivement réservé
+					aux professionnels du bâtiment</p>
+			</div>
+			<div>
+				<p class="footer-title">La plateforme du bâtiment</p>
+				<ul>
+					<a href="#"><li>Le concept</li></a>
+					<a href="#"><li>Nos engagements</li></a>
+					<a href="#"><li>Nos partenaires</li></a>
+					<a href="#"><li>Rejoignez-nous</li></a>
+				</ul>
+			</div>
+			<div>
+				<p class="footer-title">Le catalogue</p>
+				<ul>
+					<a href="#"><li>Gros oeuvres</li></a>
+					<a href="#"><li>Menuiserie</li></a>
+					<a href="#"><li>Peinture</li></a>
+					<a href="#"><li>Carrelage</li></a>
+					<a href="#"><li>Plomberie</li></a>
+					<a href="#"><li>Électricité</li></a>
+					<a href="#"><li>Protection</li></a>
+				</ul>
+			</div>
+			<div>
+				<p class="footer-title">Services produits</p>
+				<ul>
+					<a href="#"><li>SAV Fournisseurs</li></a>
+					<a href="#"><li>Démonstration</li></a>
+					<a href="#"><li>Reprise</li></a>
+					<a href="#"><li>Mise à la teinte</li></a>
+					<a href="#"><li>Atelier de découpe</li></a>
+					<a href="#"><li>Découpe de câbles</li></a>
+				</ul>
+			</div>
+			<div>
+				<p class="footer-title">Outils Pros</p>
+				<ul>
+					<a href="#"><li>Conseils</li></a>
+					<a href="#"><li>Showroom</li></a>
+					<a href="#"><li>Formations</li></a>
+					<a href="#"><li>Cafétaria</li></a>
+					<a href="#"><li>Satisfaction</li></a>
+					<a href="#"><li>Livraison</li></a>
+					<a href="#"><li>Recyclage des déchets</li></a>
+				</ul>
+			</div>
+			<div class="bouton-top">
+				<a href="#"><img src="img/bouton-top.png" alt="bouton pour retourner en haut de page"></a>
+			</div>
+		</div>
+		
+		
+	</footer>
+	<div class="footer-down">
+		<div>
+			<a href="#"><p>CGV</p></a>
+		</div>
+		<hr>
+		<div>
+			<a href="#"><p>Mentions légales</p></a>
+		</div>
+		<hr>
+		<div>
+			<a href="#"><p>CPV offres Soirs et Week-Ends</p></a>
+		</div>
+		<hr>
+		<div>
+			<a href="#"><p>Contactez-nous</p></a>
+		</div>
+		<hr>
+		<div>
+			<a href="#"><p>Plan du site</p></a>
+		</div>
+		<hr>
+		<div>
+			<a href="#"><p>Information sur les cookies</p></a>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
